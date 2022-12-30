@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+    <style>
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        section .bg img {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            bottom: -50px;
+            right: -50px;
+
+        }
+
+        section .bg img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        section img {
+            position: absolute;
+            max-width: 100%;
+
+        }
+
+        section img.girl {
+            position: absolute;
+            top: 10%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="bg">
+            <img src="images/bg2.jpg" class="leyer" />
+        </div>
+        <img src="images/text1.png" class="leyer" data-speed="-1" />
+        <img src="images/text2.png" class="leyer" data-speed="4" />
+        <img src="images/girl.png" class="leyer girl" data-speed="1" />
+
+    </section>
+
+    <script>
+        document.addEventListener('mousemove', peralax);
+
+        function peralax(e) {
+            this.querySelectorAll('.leyer').forEach(leyer => {
+                var speed = leyer.getAttribute('data-speed')
+                var x = (window.innerWidth - e.pageX * speed) / 100
+                var y = (window.innerHeight - e.pageY * speed) / 100
+
+                leyer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+
+            })
+
+        }
+    </script>
+</body></html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #fff;
+            justify-content: center;
+            align-content: center;
+            display: flex;
+        }
+
+        section i {
+
+            position: absolute;
+            background: #ff2020;
+            border-radius: 100%;
+            animation: buble 5s linear infinite;
+        }
+
+        section i:nth-child(even) {
+            background: transparent;
+            border: 1px solid #ff2020;
+
+        }
+
+        @keyframes buble {
+
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+
+            10% {
+                opacity: 1;
+
+            }
+
+            90% {
+                opacity: 1;
+
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-200%);
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <section></section>
+
+
+    <script>
+        function bubles() {
+
+            var count = 500;
+
+            var section = document.querySelector("section");
+
+            var i = 0;
+            while (i < count) {
+                var buble = document.createElement("i");
+
+                var x = Math.floor(Math.random() * window.innerWidth);
+                var y = Math.floor(Math.random() * window.innerHeight);
+
+                var size = Math.random() * 10;
+
+                buble.style.left = x + 'px';
+                buble.style.top = y + 'px';
+
+
+                buble.style.width = 1 + size + 'px';
+                buble.style.height = 1 + size + 'px';
+
+
+                section.appendChild(buble);
+
+                i++
+
+
+            }
+        }
+
+        bubles();
+    </script>
+</body></html>

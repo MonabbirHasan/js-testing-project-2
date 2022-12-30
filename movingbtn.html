@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  <style>
+      body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          margin: 0;
+          padding: 0;
+         background: #000;
+      } 
+      a{
+      font-size: 2.5em;
+          font-family: sans-serif;
+          padding: 10px 30px;
+          background: rgba(0,0,0,.5);
+          text-decoration:none;
+          letter-spacing: 1px;
+          font-weight: 800;
+          color: #000;
+         position: relative;
+          text-transform: uppercase;
+          top: 0;
+          left: 0;
+          border: 2px solid #ffffff;
+          overflow: hidden;
+            transition: .5s;
+          -webkit-text-fill-color:transparent;
+          -webkit-text-stroke-width:1px;
+      
+      }
+      a span{
+          position: relative;
+          z-index: 1;
+      }
+      a:before{
+          content: '';
+          position: absolute;
+          top:var(--y);
+          left: var(--x);
+          background:linear-gradient(90deg, #e618d7,#E74C3C);
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          transition: .5s;
+          transform: translate(-50%,-50%);
+      }
+      a:hover:before{
+       width: 500px;
+          height: 500px;   
+          
+      }
+    
+    </style>
+</head>
+<body>
+    <a href="#" class="btn"><span>button</span></a>
+     
+     <script>
+         
+     const btn=document.querySelector('.btn');
+         btn.onmousemove=function(e){
+             
+            var x=e.pageX - btn.offsetLeft;
+             var y=e.pageY - btn.offsetTop;
+             btn.style.setProperty('--x', x + 'px');
+             btn.style.setProperty('--y', y + 'px');
+             
+             
+         }
+         
+
+    </script>
+</body>
+</html>

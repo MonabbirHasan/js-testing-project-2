@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        section video {
+            width: 50%;
+            height: 50%;
+            position: relative;
+            top: 0;
+            left: 0;
+
+            transition: .5s;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section>
+        <video src="videos/waterpol.mp4" type="video/mp4" loop muted class="clip"></video>
+        <video src="videos/waterpol.mp4" type="video/mp4" loop muted class="clip"></video>
+        <video src="videos/waterpol.mp4" type="video/mp4" loop muted class="clip"></video>
+        <video src="videos/waterpol.mp4" type="video/mp4" muted loop class="clip"></video>
+
+    </section>
+
+    <script>
+        var clip = document.querySelectorAll(".clip");
+
+
+        for (let i = 0; i < clip.length; i++) {
+
+            clip[i].addEventListener('mouseover', function() {
+
+                clip[i].play();
+
+
+            })
+            clip[i].addEventListener('mouseout', function() {
+
+                clip[i].pause();
+
+
+            })
+        }
+    </script>
+
+</body></html>

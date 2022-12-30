@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            display: flex;
+            background: #000;
+        }
+        a {
+            position: relative;
+            font-size: 2.5em;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            color: #ffff;
+            cursor: pointer;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            padding: 15px 25px;
+            border-radius: 35px;
+            background-size: 400%;
+            z-index: 1;
+        }
+        a:hover {
+            animation: animate 8s linear infinite;
+        }
+        a::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            backdrop-filter: blur(30px);
+            border-radius: 45px;
+            z-index: -1;
+            transition: .5s;
+        }
+        a:hover:before {
+            animation: animate 8s linear infinite;
+        }
+        @keyframes animate {
+            0% {
+                background-position: 0;
+            }
+            100% {
+                background-position: 400%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">button </a>
+
+
+
+
+
+</body>
+</html>

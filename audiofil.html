@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+    
+    
+    .audio-box audio{
+        position: absolute;
+       color: none;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 30px;
+        object-fit: cover;
+        flex-wrap: wrap;
+    }
+    .audio-box{
+        position: relative;
+        width: 500px;
+        height: 100px;
+        background: #F1F1F1;
+        
+        
+    }
+/*
+    
+    audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     background-color:gray;
+     color: red;
+     }
+    audio::-webkit-media-controls-play-button{
+        background: #fff;
+        color: #fff;
+    }
+    
+*/
+/*
+     audio::-webkit-media-controls-panel {
+     background-color: #000;
+     color: #000;
+     }
+    
+*/
+    .duration{
+      position: relative;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 30px;
+        background: red;
+        
+    }
+    .box1{
+      position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 300px;
+        height: 10px;
+        background: blue;
+        
+    }
+    
+</style>
+<link rel="stylesheet" href="css2/all.min.css" />
+<link rel="stylesheet" href="css2/fontawesome.min.css" />
+</head>
+<body>
+<audio id="files" src="audio_file/audio1.mp3" controls></audio>
+<div class="duration">
+    <div class="box1"></div>
+<p>0</p>
+</div>
+<div class="audio-box"></div>
+<button class="btn1">c</button>
+<input type="range" minlength="20" value="20" max="100"  id="rangval"/>
+<input type="range" minlength="0" value="0" max="100"  id="rangval2"/>
+
+
+
+
+
+<button id="stopbtn">stop</button>
+<button id="next">next</button>
+
+<h1>0</h1>
+
+<!--
+<button class="btn1">click play</button>
+<button class="btn1">click play</button>
+-->
+<img src="images/bg1.jpg" alt="">
+
+<a href="images/banner.png" download="fos">download</a>
+
+<script type="text/javascript">
+
+   
+    
+    
+   var file=document.querySelector(".btn1"); 
+   var rangval=document.querySelector("#rangval"); 
+       var rangval2=document.querySelector("#rangval2"); 
+
+    
+   var resultval=document.querySelector("h1"); 
+   var stopbtn=document.querySelector("#stopbtn"); 
+   var next=document.querySelector("#next"); 
+   var audiobox=document.querySelector(".audio-box"); 
+   var files=document.querySelector("#files"); 
+   var box1=document.querySelector(".box1"); 
+       var duration=document.querySelector(".duration"); 
+       var p=document.querySelector("p"); 
+
+
+    
+       files.ontimeupdate=function(e){
+         p.innerHTML=Math.floor(files.currentTime +100/ files.duration); 
+        box1.style.width=Math.floor(files.currentTime +100/files.duration)+"%"; 
+
+       }
+    duration.onclick=function(e){
+        
+   var time=  files.currentTime=((e.offsetX/duration.offsetWidth) * files.duration);
+        
+        
+    }
+
+       
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
+file.addEventListener("click",function(){
+
+var text=this.innerHTML;
+
+audioPlay(text);
+        
+    
+   var element=document.createElement("audio");
+    element.setAttribute("controls","autoplay");
+   
+      element.setAttribute("src","audio_file/audio1.mp3")
+    
+   
+    audiobox.appendChild(element)
+    
+    
+});
+  
+function audioPlay(text){
+    
+switch(text){
+    case "c":
+var audio=new Audio("audio_file/audio1.mp3");
+    
+
+rangval.addEventListener("mousemove",setvolume)
+    function setvolume(){
+       audio.volume= rangval.value /100;
+        resultval.innerHTML=rangval.value;
+    }
+      stopbtn.addEventListener("click",function(){
+        audio.pause();    
+});
+        
+  audio.play();
+break;     
+        
+}
+}
+        
+//        
+////      case "next":
+////var audio=new Audio("audio_file/tony.mp3");
+////        
+//////rangval.addEventListener("mousemove",setvolume)
+////////    function setvolume(){
+////////       audio.volume= rangval.value /100;
+////////        resultval.innerHTML=rangval.value;
+////////    }
+////////      stopbtn.addEventListener("click",function(){
+////////        audio.pause();    
+////////});
+////        
+////audio.play();
+////break;     
+////        
+//        
+//        
+//        
+//        
+//}
+//
+//}
+//
+//    
+
+
+</script>
+</body>
+</html>

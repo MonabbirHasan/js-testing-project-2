@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List book</title>
+</head>
+<link rel="stylesheet" href="css2/all.min.css" />
+<link rel="stylesheet" href="css2/fontawesome.min.css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="liststyle.css" />
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+    <div id="container">
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div id="total-box">
+            <div class="dark-light">
+                <p>light</p>
+                <h6>dark</h6>
+                <button id="dark-btn"><i class="far fa-lightbulb"></i></button>
+            </div>
+            <div id="input-box">
+                <form action="">
+                    <div class="alert-box">
+                        <p>please write anything</p>
+                    </div>
+                    <div id="text-box">
+                        <input type="text" placeholder="pleas enter your name" class="inputval1" value="" />
+                        <input type="text" placeholder="pleas enter ex date" class="inputval2" value="" />
+                    </div>
+                    <div class="number-box">
+                        <p id="counting1">0</p>
+                        <p id="counting2">0</p>
+                        <p id="counting3">0</p>
+                        <p id="counting4">0</p>
+                    </div>
+                    <div id="text-box">
+                        <input type="text" placeholder="pleas enter your id " class="inputval3" value="" />
+                        <input type="text" placeholder="pleas enter a price" class="inputval4" value="" />
+                    </div>
+                    <div class="upload-box">
+                        <div class="upload-btn">
+                            <label class="upbtn1" for="upbtn2">upload-file</label>
+                            <input type="file" name="upload-file" id="upbtn2" class="upbtn2" />
+                        </div>
+                        <div class="imag-box">
+                            <img src="images1/jangle.jpeg">
+                        </div>
+                    </div>
+                    <div class="textarea-box">
+                        <textarea id="textval" class="values" placeholder="pleas write anything" value=""></textarea>
+                        <div class="textarea-count">
+                            <p id="count5">0</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="btn-box">
+                <button class="add-list">addList</button>
+            </div>
+            <div class="btn-alert">
+                <p class="alert-box">task list savid</p>
+            </div>
+            <div id="delet-alert">
+                <p>are you sure its data delet</p>
+                <span id="delet-btn"><i class="far fa-times-circle"></i></span>
+            </div>
+
+            <div id="list-box">
+                <div id="box-1">
+                    <img class="user-images" src="images1/jangle.jpeg" />
+                    <h3 class="text1">hello hi</h3>
+                    <h3 class="text1">hello hi</h3>
+                    <h3 class="text1">hello hi</h3>
+                    <h3 class="text1">hello hi</h3>
+                    <div class="text-box">
+                        <p>ype and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with d</p>
+                    </div>
+                    <div id="delet-btn">
+                    </div>
+                    <div id="style-box">
+                        <div id="edit-box">
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div id="color-box">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div id="delet-box">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                        <div id="share-box">
+                            <i class="fas fa-share-alt-square"></i>
+                        </div>
+                    </div>
+                    <div id="all-color">
+                        <div class="wraper">
+                            <span class="span1 kbl"></span>
+                            <span class="span2 kbl"></span>
+                            <span class="span3 kbl"></span>
+                            <span class="span4 kbl"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="box-1">
+                    <img class="user-images" src="images1/jangle.jpeg" />
+                    <h3 class="text1">hello hi</h3>
+                    <h3 class="text1">hello hi</h3>
+                    <h3 class="text1">hello hi</h3>
+                    <h3 class="text1">hello hi</h3>
+                    <div class="text-box">
+                        <p>ype and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with d</p>
+                    </div>
+                    <div id="delet-btn">
+                    </div>
+                    <div id="style-box">
+                        <div id="edit-box">
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div id="color-box">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div id="delet-box">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                        <div id="share-box">
+                            <i class="fas fa-share-alt-square"></i>
+                        </div>
+                    </div>
+                    <div id="all-color">
+                        <div class="wraper">
+                            <span class="span1 kbl"></span>
+                            <span class="span2 kbl"></span>
+                            <span class="span3 kbl"></span>
+                            <span class="span4 kbl"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="clear-box">
+                <button id="clear">clear all list</button>
+                <span><i class="fas fa-trash-alt"></i></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        const inputVal1 = document.getElementsByClassName('inputval1')[0];
+        const inputVal2 = document.getElementsByClassName('inputval2')[0];
+        const inputVal3 = document.getElementsByClassName('inputval3')[0];
+        const inputVal4 = document.getElementsByClassName('inputval4')[0];
+        const textval = document.getElementsByClassName('values')[0];
+
+
+        const btnbox = document.getElementById('btn-box');
+        const addTaskBtn = document.getElementsByClassName('delet-btn1');
+
+        //        inputVal1 + inputVal2 + inputVal3 + inputVal4.addEventListener('keyup', function() {
+        //            document.querySelector('.alert-box').classList.add('alert-fals');
+        //            document.querySelector('.btn-alert').classList.remove("alertt");
+        //            const btnalert = document.getElementsByClassName('btn-alert');
+        //
+        //        });
+        //
+        //        function deletbtn1() {
+        //
+        //            alert("jkhfg")
+        //        }
+        //
+        //        //////////////local storeg stert here////
+        //        btnbox.addEventListener("click", () => {
+        //
+        //            document.querySelector('.btn-alert').classList.add("alertt");
+        //
+        //            setTimeout(() => {
+        //
+        //                document.querySelector('.btn-alert').classList.remove("alertt");
+        //
+        //            }, 3000);
+        //
+        //            //setTimeout( ()=>{
+        //            //
+        //            //  document.getElementById("delet-alert").classList.remove("deted");
+        //            //
+        //            //},2000);
+        //            //
+        //            if (inputVal1.value == '') {
+        //                document.querySelector('.alert-box').classList.add('alert-true');
+        //            }
+        //
+        //            if (inputVal1.value && inputVal2.value && inputVal3.value && inputVal4.value.trim() != 0) {
+        //
+        //                let localItems = JSON.parse(localStorage.getItem('localItem'))
+        //                if (localItems === null) {
+        //                    taskList = []
+        //
+        //                } else {
+        //                    taskList = localItems;
+        //
+        //                }
+        //                taskList.push(inputVal1.value + "</br>" + inputVal2.value + "</br>" + inputVal3.value + "</br>" + inputVal4.value + "</br>" + textval.value)
+        //
+        //                localStorage.setItem('localItem', JSON.stringify(taskList));
+        //
+        //            }
+        //            showItem()
+        //        })
+        //
+        //        function showItem() {
+        //            let localItems = JSON.parse(localStorage.getItem('localItem'))
+        //            if (localItems === null) {
+        //                taskList = []
+        //
+        //            } else {
+        //                taskList = localItems;
+        //            }
+        //
+        //            let html = '';
+        //            let itemShow = document.querySelector('#list-box');
+        //            taskList.forEach((data, index) => {
+        //
+        //                html += `
+        //
+        //            <div id="box-1">
+        //                   <img class="" src="images1/jangle.jpeg"/>
+        //                <h3 class="text1">${data}</h3>
+        //                <div id="delet-btn">
+        //
+        //                </div>
+        //
+        //                <div id="style-box">
+        //
+        //                    <div id="edit-box">
+        //                        <i class="far fa-edit"></i>
+        //                    </div>
+        //
+        //                    <div id="color-box">
+        //                      <i class="fas fa-tint" ></i>
+        //                    </div>
+        //                     <div id="delet-box"  onClick="deleteItem(${index})">
+        //                       <i class="fas fa-trash-alt"></i>
+        //                     </div>
+        //
+        //                     <div id="share-box">
+        //                       <i class="fas fa-share-alt-square"></i>
+        //                     </div>
+        //
+        //                </div>
+        //                  <div id="all-color">
+        //                       <div class="wraper">
+        //                            <span class="span1 kbl"></span>
+        //                            <span class="span2 kbl"></span>
+        //                            <span class="span3 kbl"></span>
+        //                            <span class="span4 kbl"></span>
+        //
+        //                         </div>
+        //
+        //
+        //                  </div>
+        //        </div>
+        //
+        //                           `
+        //            })
+        //            itemShow.innerHTML = html;
+        //        }
+        //        showItem()
+        //
+        //        function deleteItem(index) {
+        //            let localItems = JSON.parse(localStorage.getItem('localItem'))
+        //            taskList.splice(index, 1)
+        //            localStorage.setItem('localItem', JSON.stringify(taskList));
+        //            showItem()
+        //
+        //            document.getElementById("delet-alert").classList.toggle("deted");
+        //            setTimeout(() => {
+        //
+        //                document.getElementById("delet-alert").classList.remove("deted");
+        //
+        //            }, 2000);
+        //
+        //        }
+        //
+        //        function clearTask() {
+        //
+        //            localStorage.clear()
+        //            showItem()
+        //        }
+        //////////////////////////////////////
+        var prograss = document.getElementById("progressbar");
+
+        var totalHeight = document.body.scrollHeight - window.innerHeight;
+
+        window.onscroll = function() {
+            var progressHeight = (window.pageYOffset / totalHeight) * 100;
+
+            prograss.style.height = progressHeight + "%";
+
+        }
+
+        /////////////////style color box areaa loping stert here/////////
+
+        var bt = document.querySelectorAll("#color-box");
+        var btnt = document.querySelectorAll("#all-color");
+        for (var i = 0; i < bt.length; i++) {
+            bt[i].addEventListener("click", function() {
+
+                for (var j = 0; j < btnt.length;) {
+
+                    btnt[j++].classList.toggle("activ");
+
+                }
+
+            });
+
+        }
+
+        var count = 0;
+
+        var cls = ['red', 'blue', 'green', 'gray'];
+
+        var all = document.querySelectorAll("#box-1");
+        var allbtn = document.querySelectorAll(".kbl");
+
+        for (var t = 0; t < allbtn.length; t++) {
+            allbtn[t].addEventListener("click", function() {
+
+                count++;
+                for (d = 0; d < all.length; d++) {
+
+                    if (count >= cls.length) {
+
+                        count = 0;
+                        all[d].style.background = cls[count];
+                    } else {
+                        all[d].style.background = cls[count];
+                    }
+
+                }
+            });
+        }
+
+        let darkbtn = document.getElementById("dark-btn");
+        let darklight = document.querySelector("#total-box");
+
+        darkbtn.addEventListener("click", function() {
+
+            darkbtn.classList.toggle("dark");
+            darklight.classList.toggle("darklight");
+        });
+
+        var counting1 = document.querySelector("#counting1");
+        var counting2 = document.querySelector("#counting2");
+        var counting3 = document.querySelector("#counting3");
+        var counting4 = document.querySelector("#counting4");
+        var count5 = document.querySelector("#count5");
+
+
+        inputVal1.addEventListener("keyup", function() {
+            counting1.innerHTML = inputVal1.value.length;
+        });
+        inputVal2.addEventListener("keyup", function() {
+            counting2.innerHTML = inputVal2.value.length;
+        });
+        inputVal3.addEventListener("keyup", function() {
+            counting3.innerHTML = inputVal3.value.length;
+        });
+        inputVal4.addEventListener("keyup", function() {
+            counting4.innerHTML = inputVal4.value.length;
+        });
+        textval.addEventListener("keyup", function() {
+            count5.innerHTML = textval.value.length;
+        });
+    </script>
+</body></html>

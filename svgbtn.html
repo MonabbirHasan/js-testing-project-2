@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+       margin: 0;
+            padding: 0;
+            background: #000;
+        }
+        a{
+       color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 2.5em;
+            width: 200px;
+            height:60px;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            line-height: 60px;
+             z-index: 1;
+        }
+       
+        a svg rect,
+        a svg{
+         position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            fill:transparent;
+          
+        }
+        
+        a svg rect{
+         stroke:#00e2ff;
+            stroke-width:4;
+            transition:2s;
+            stroke-dasharray:60 200;
+            stroke-dashoffset:320;
+             
+        }   
+        a:hover svg rect{
+            
+              stroke:#ff00ff;
+             stroke-dasharray:200 60;
+            stroke-dashoffset:0;            
+        }   
+        
+        h1{
+            
+            color:#fff;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <a href="#">
+        <svg><rect></rect></svg>
+        button
+        </a>
+
+        <!-----<div id="list-box">
+                
+            
+            
+            <div id="box-1">
+                    <h1 class="text1"></h1>
+                    <h1 class="text1"></h1>
+                    <h1 class="text1"></h1>
+                    <h1 class="text1"></h1>
+                    <div id="delet-btn">
+                        <button id="delet-btn1" onclick="(${index});">delet list</button>
+                    </div>
+                </div>
+                <div id="box-1">
+                    <h1 class="text1"></h1>
+                    <h1 class="text1"></h1>
+                    <h1 class="text1"></h1>
+                    <h1 class="text1"></h1>
+                    <div id="delet-btn">
+                        <button id="delet-btn1" onclick="(${index});">delet list</button>
+                    </div>
+                </div>
+                <div id="style-box">
+                    <div id="color-box"></div>
+                    <div id="edit-box"></div>
+                </div>
+
+</div--
+      /////////////////////////////////////////////////////////////////////////
+        //        btnbox.addEventListener("click", () => {
+        //
+        //            if (inputVal2.value.trim() != 0) {
+        //                let localItems = JSON.parse(localStorage.getItem('localItem'))
+        //                if (localItems === null) {
+        //                    taskList = []
+        //
+        //                } else {
+        //                    taskList = localItems;
+        //                }
+        //                taskList.push(inputVal2.value)
+        //                localStorage.setItem('localItem', JSON.stringify(taskList));
+        //            }
+        //
+        //            showItem()
+        //        })
+        //
+        //        function showItem() {
+        //            let localItems = JSON.parse(localStorage.getItem('localItem'))
+        //            if (localItems === null) {
+        //                taskList = []
+        //
+        //            } else {
+        //                taskList = localItems;
+        //            }
+        //
+        //
+        //            let html = '';
+        //            let itemShow = document.querySelector('#list-box');
+        //            taskList.forEach((data, index) => {
+        //
+        //
+        //                html += `
+        //                    <h1 class="text1">${data}</h1>
+        //                    
+        //    `
+        //            })
+        //            itemShow.innerHTML = html;
+        //        }
+        //        showItem()
+        //
+        //        function deleteItem(index) {
+        //            let localItems = JSON.parse(localStorage.getItem('localItem'))
+        //            taskList.splice(index, 1)
+        //            localStorage.setItem('localItem', JSON.stringify(taskList));
+        //            showItem()
+        //        }
+        //
+        //        function clearTask() {
+        //
+        //            localStorage.clear()
+        //            showItem()
+        //        }
+        //    
+         
+       
+        <button id="delet-btn1" onClick="deleteItem(${index})">delet list</button>
+       -->
+       <h1>0</h1>
+<input type="text" id="inpuval">
+       <script>
+//           var ht=document.querySelector("h1");
+//    var str1=[
+//        
+////   ['name','hasan','mal','age',30],
+////    ['name','hasan','mal','age',30],
+////      ['name','hasan','mal','age',30]
+//        
+//      {name:"hasan",subjact:'bangla',number:30},
+//      {name:"nasim",subjact:'bangla',number:60},
+//
+//        
+//    ];
+
+//      for(var a=0;a<str1.length;a++){
+//          
+////          document.write(str1[a].name);
+//          ht.innerHTML=str1[a].name + str1[a].subjact;
+//          
+//          
+////      }     
+//           var inputval=document.getElementById("inpuval");
+//           inputval.addEventListener("keyup",function(){
+//              
+//           if(inputval==str1[a].name){
+//              for(var a=0;a<str1.length;a++){
+//         alert("jkghdf")
+////          document.write(str1[a].name);
+////          ht.innerHTML=str1[a].name + str1[a].subjact;
+////          console.log(str1[a].name + str1[a].subjact);
+//          
+//      }     
+//       
+//               
+//           }
+//              
+//           });
+//          
+//        
+//           ht.innerHTML=str1;
+//               
+//               
+//                   task.push(allsrt);
+////           ht.innerHTML=task.name;
+//        console.log(JSON.stringify(task.name))
+////        console.log(allsrt);
+//               
+
+    
+    </script>
+  
+        
+        
+</body>
+</html>
